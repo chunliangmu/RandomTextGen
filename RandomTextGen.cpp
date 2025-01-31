@@ -101,22 +101,22 @@ int main() {
 
 	const unsigned int filesize_min = 4 * 1024 * 1024;	// MB
 	const unsigned int filesize_max = filesize_min * 2;
-	const std::string txt_delimiter(79, '-');
-	std::string char_library;
+	const std::string sep(79, '-');
+	std::string chrlib;
 	char txt_exit;
-	for (char i = 'A'; i <= 'Z'; i++) char_library.push_back(i);
-	for (char i = 'a'; i <= 'z'; i++) char_library.push_back(i);
-	for (char i = '0'; i <= '9'; i++) char_library.push_back(i);
-	char_library += "!\"#$%&'()*+,-./:;=>?@[\\]^_`{|}~";
+	for (char i = 'A'; i <= 'Z'; i++) chrlib.push_back(i);
+	for (char i = 'a'; i <= 'z'; i++) chrlib.push_back(i);
+	for (char i = '0'; i <= '9'; i++) chrlib.push_back(i);
+	chrlib += "!\"#$%&'()*+,-./:;=>?@[\\]^_`{|}~";
 
-	std::cout << "Characters library:\n" << char_library << std::endl;
-	std::cout << txt_delimiter << std::endl;
+	std::cout << "Characters library:\n" << chrlib << std::endl;
+	std::cout << sep << std::endl;
 
-	get_rand_string(char_library, 16, true);
+	get_rand_string(chrlib, 16, true);
 	//create_rand_file("temp_RandomChars.txt", filesize_min, filesize_max, true);
 	//create_rand_file("temp_RandomChars.txt", filesize_min, filesize_max, false);
 
-	std::cout << txt_delimiter << std::endl;
+	std::cout << sep << std::endl;
 	std::cout << "Press any key to exit...";
 	std::getchar();
 	return 0;
